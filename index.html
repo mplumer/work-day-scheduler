@@ -3,89 +3,152 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="user-inputviewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
 </head>
 
 <body>
     <header class="jumbotron">
+        <p id="year" class="display-2"></p>
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">A simple calendar app for scheduling your work day</p>
-        <p id="currentDay" class="lead"></p>
+        <p id="currentDay" class="h1"></p>
+        <!-- <input type="time" id="time"> -->
+        <p id="time" class="h2"></p>
     </header>
-
 
     <main class="container col-12 d-flex flex-column">
 
         <!-- Timeblocks go here -->
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">9AM</div>
-            <textarea id="slot0" class="user-input col-10 pt-3" name="" cols="30" rows="5">Breakfast</textarea>
-            <button id="saveBtn0" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+        <article id="div1" class="time-block row col-12 m-1">
 
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">10AM</div>
-            <textarea id="slot1" class="user-input col-10 pt-3" name="" cols="30" rows="5">Workout</textarea>
-            <button id="saveBtn1" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+            <span id="9" class="col-1 hour text-right pt-3">9 AM</span>
 
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">11AM</div>
-            <textarea id="slot2" class="user-input col-10 pt-3" name="" cols="30" rows="5">Shower</textarea>
-            <button id="saveBtn2" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+            <label for="textarea"></label>
+            <textarea id="textarea1" class="user-input col-10 pt-3" name="user-input" cols="30" rows="10"
+                placeholder="Click here to input text."></textarea>
 
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">12PM</div>
-            <textarea id="slot3" class="user-input col-10 pt-3" name="" cols="30" rows="5">Lunch</textarea>
-            <button id="saveBtn3" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+            <span id="saveBtn0" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
 
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">1PM</div>
-            <textarea id="slot4" class="user-input col-10 pt-3" name="" cols="30" rows="5">Module 6</textarea>
-            <button id="saveBtn4" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+        </article>
 
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">2PM</div>
-            <textarea id="slot5" class="user-input col-10 pt-3" name="" cols="30" rows="5">Module 6</textarea>
-            <button id="saveBtn5" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+        <article id="div2" class="time-block row col-12 m-1">
 
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">3PM</div>
-            <textarea id="slot6" class="user-input col-10 pt-3" name="" cols="30" rows="5">Nap</textarea>
-            <button id="saveBtn6" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+            <span id="10" class="col-1 hour text-right pt-3"> 10 AM</span>
 
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">4PM</div>
-            <textarea id="slot7" class="user-input col-10 pt-3" name="" cols="30" rows="5">Dinner</textarea>
-            <button id="saveBtn7" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+            <label for="textarea"></label>
+            <textarea id="textarea2" class="user-input col-10 pt-3" name="user-input" cols=" 30" rows="10"></textarea>
 
-        <div class="time-block row col-12 m-1 shadow-sm h-15">
-            <div class="col-1 hour text-right pt-4 font-weight-bold">5PM</div>
-            <textarea id="slot8" class="user-input col-10 pt-3" name="" cols="30" rows="5">Class</textarea>
-            <button id="saveBtn8" class="col-1 saveBtn"><i class='fas fa-save'></i></button>
-        </div>
+            <span id="saveBtn1" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
+
+        </article>
+
+        <article id="div3" class="time-block row col-12 m-1">
+
+            <span id="11" class="col-1 hour text-right pt-3"> 11 AM</span>
+
+            <label for="textarea"></label>
+            <textarea id="textarea3" class="user-input col-10 pt-3" name="user-input" cols="30" rows="10"
+                class="w-90"></textarea>
+
+            <span id="saveBtn2" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
+
+        </article>
+
+        <article id="div4" class="time-block row col-12 m-1">
+
+            <span id="12" class="col-1 hour text-right pt-3"> 12 PM</span>
+
+            <label for="textarea"></label>
+            <textarea id="textarea4" class="user-input col-10 pt-3" name="user-input" cols="30" rows="10"></textarea>
+            <span id="saveBtn3" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
+        </article>
+
+        <article id="div5" class="time-block row col-12 m-1">
+
+            <span id="13" class="col-1 hour text-right pt-3"> 1 PM</span>
+
+            <label for="textarea"></label>
+            <textarea id="textarea5" class="user-input col-10 pt-3" name="user-input" cols="30" rows="10"></textarea>
+
+            <span id="saveBtn4" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
+
+        </article>
+
+        <article id="div6" class="time-block row col-12 m-1">
+
+            <span id="14" class="col-1 hour text-right pt-3"> 2 PM</span>
+
+            <label for="textarea"></label>
+            <textarea id="textarea6" class="user-input col-10 pt-3" name="user-input" cols="30" rows="10"></textarea>
+
+            <span id="saveBtn5" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
+
+        </article>
+
+        <article id="div7" class="time-block row col-12 m-1">
+
+            <span id="15" class="col-1 hour text-right pt-3"> 3 PM</span>
+
+            <label for="textarea"></label>
+            <textarea id="textarea7" class="user-input col-10 pt-3" name="user-input" cols="30" rows="10"></textarea>
+
+            <span id="saveBtn6" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
+
+        </article>
+
+        <article id="div8" class="time-block row col-12 m-1">
+
+            <span id="16" class="col-1 hour text-right pt-3"> 4 PM</span>
+
+            <label for="textarea"></label>
+            <textarea id="textarea8" class="user-input col-10 pt-3" name="user-input" cols="30" rows="10"></textarea>
+
+            <span id="saveBtn7" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
+
+        </article>
+
+        <article id="div9" class="time-block row col-12 m-1">
+
+            <span id="17" class="col-1 hour text-right pt-3"> 5 PM</span>
+
+            <label for="textarea"></label>
+            <textarea id="textarea9" class="user-input col-10 pt-3" name="user-input" cols="30" rows="10"></textarea>
+
+            <span id="saveBtn8" class="col-1 saveBtn"><span
+                    class="display-4 oi oi-hard-drive d-block mt-5 mb-2 ml-1"></span>SAVE</span>
+
+        </article>
 
     </main>
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
         integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
         crossorigin="anonymous"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
