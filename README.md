@@ -8,10 +8,10 @@ An online schedule manager.
 * JavaScript
 * jQuery
 
-![Screenshot](assets/images/screenshot.png)
+![Screenshot](assets/images/screenshot.jpg)
 
 ## Website
- 
+ https://mplumer.github.io/work-day-scheduler/
 
 ## Contribution
  ©️2020 Max Plumer
